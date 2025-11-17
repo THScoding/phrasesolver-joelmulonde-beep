@@ -5,13 +5,39 @@
  */
 import java.util.Scanner;
 
-public class Player
-{
-  /* your code here - attributes */
+public class Player {
+  private String name;
+  private int points;
 
-  /* your code here - constructor(s) */ 
+  // No-argument constructor -->  prompts user for name
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Enter player name: ");
+    this.name = scanner.nextLine();
+    this.points = 0;
+    System.out.println("Welcome to the game, " + this.name + "!");
+  }
 
-  /* your code here - accessor(s) */ 
+  // Constructor with inputName parameter
+  public Player(String inputName) {
+    this.name = inputName;
+    this.points = 0;
+    System.out.println("Welcome to the game, " + this.name + "!");
+  }
 
-  /* your code here - mutator(s) */ 
+  // gets and sets
+  public int getPoints() {
+    return points;
+  }
+
+  public void setPoints(int points) {
+    this.points = points;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
 }
